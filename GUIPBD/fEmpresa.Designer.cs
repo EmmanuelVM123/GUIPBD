@@ -59,6 +59,7 @@ namespace GUIPBD
             this.empresaDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             idEmpresaLabel = new System.Windows.Forms.Label();
             razonSocialLabel = new System.Windows.Forms.Label();
             this.pnlBotones.SuspendLayout();
@@ -68,6 +69,7 @@ namespace GUIPBD
             ((System.ComponentModel.ISupportInitialize)(this.empresaBindingNavigator)).BeginInit();
             this.empresaBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.empresaDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // idEmpresaLabel
@@ -192,6 +194,7 @@ namespace GUIPBD
             this.btnGuardar.Size = new System.Drawing.Size(91, 73);
             this.btnGuardar.TabIndex = 3;
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // empresaTableAdapter
             // 
@@ -266,7 +269,6 @@ namespace GUIPBD
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Posición";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -332,6 +334,10 @@ namespace GUIPBD
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // fEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -354,6 +360,7 @@ namespace GUIPBD
             this.empresaBindingNavigator.ResumeLayout(false);
             this.empresaBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.empresaDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -387,5 +394,6 @@ namespace GUIPBD
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.TextBox razonSocialTextBox;
         private System.Windows.Forms.TextBox idEmpresaTextBox;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
